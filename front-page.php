@@ -29,8 +29,6 @@
     </div>
   <?php endwhile; wp_reset_query(); ?>
 
-
-
 </div>
 <a class="carousel-control-prev" href="#demo" data-slide="prev">
  <span class="carousel-control-prev-icon"></span>
@@ -42,17 +40,17 @@
 
 </section>
 
-<section class="abt-section" id="about">
-  <div class="container">
-    <div class="abt-heading text-center">
-    <h1>Online Stores Since 1990</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias.</p>
-    <p style="margin-bottom: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam 
-    dignissimos molestias Aliquam non, recusandae tempore ipsam dignissimos.</p>
-    <a href="#">Know More</a>
+  <section class="abt-section" id="about">
+    <div class="container">
+      <div class="abt-heading text-center">
+      <h1>Online Stores Since 1990</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias.</p>
+      <p style="margin-bottom: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam dignissimos molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae tempore ipsam 
+      dignissimos molestias Aliquam non, recusandae tempore ipsam dignissimos.</p>
+      <a href="#">Know More</a>
+      </div>
     </div>
-  </div>
-</section> 
+  </section> 
 
 
 
@@ -74,6 +72,7 @@
   if( $products->have_posts()  ) : ?>
   <?php while( $products-> have_posts() ) : $products->the_post() ?>
   <div class="col-lg-4 col-md-6 col-sm-12 pt-5">
+    <?php $price = get_post_meta( get_the_ID(), 'product_price' , true ) ?>
         <div class="pro-sep-sec">
           <figure>
           <?php the_post_thumbnail( 'medium' , array('class' => 'img-fluid post-img')) ?>
@@ -85,7 +84,7 @@
          <h4> <?php the_title() ?> </h4>
          </div>
          <div class="col-md-4">
-           <h3>$8,200</h3>
+           <h3><?php echo $price ?></h3>            
          </div>
        </div>
        <p><?php the_excerpt() ?></p>

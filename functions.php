@@ -22,8 +22,7 @@ function online_store_scripts()
     register_nav_menus( array(
         'primary' => __('Primary Menu')
 	) );
-    
-    
+
 
   //custom footer 
 
@@ -65,4 +64,6 @@ include get_theme_file_path( 'inc/productspage.php');
 include get_theme_file_path( 'inc/testimonials.php' );
 include get_theme_file_path( 'inc/slider.php' );
 include get_theme_file_path( 'inc/product-metabox.php' );
+
+
 

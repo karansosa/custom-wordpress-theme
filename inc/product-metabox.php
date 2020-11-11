@@ -16,7 +16,7 @@ function product_add_meta_box() {
 		'product-product',
 		__( 'Product', 'product' ),
 		'product_html',
-		'post',
+		'product',
 		'normal',
 		'default'
 	);

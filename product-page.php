@@ -4,9 +4,6 @@
 
 ?>
 
-
-
-
 <?php get_header() ?>
 
 
@@ -58,7 +55,7 @@
         <?php while( $pp-> have_posts() ) : $pp->the_post() ?>
       <div class="col-lg-3 col-md-6 col-sm-12" >
         <div class="product-top">
-        <?php the_post_thumbnail( 'thumbnail' , array('class' => 'img-fluid')) ?>
+        <?php the_post_thumbnail( 'large' , array('class' => 'img-fluid')) ?>
           <div class="overlay">
             <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye" aria-hidden="true"></i></button>
             <button type="button" class="btn btn-secondary" title="Add To Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
